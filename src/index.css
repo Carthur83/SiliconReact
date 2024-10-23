@@ -102,6 +102,19 @@ a {
   text-decoration: none;
 }
 
+.links {
+  font-size: 1rem;
+    color: var(--color-gray-800);
+    font-weight: 700;
+    &:hover {
+      color: var(--color-primary);
+    }
+}
+
+.show-links {
+  height: 10rem;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "Manrope", sans-serif;
   font-optical-sizing: auto;
@@ -267,7 +280,6 @@ p {
 /* ---------------- */
 
 .btn-sign-in {
-  display: none;
   padding: 0.6em 1.6em;
   border-radius: 4px;
   font-weight: 500;
@@ -282,6 +294,8 @@ p {
 }
 
 .btn-menu {
+  display: flex;
+  align-items: center;
   border: none;
   font-size: 1.5rem;
   color: var(--color-text-secondary);
@@ -457,18 +471,32 @@ header {
     grid-template-columns: 1fr auto auto;
     gap: 2rem;
     padding: 1rem 1.5rem;
-
+    position: relative;
+    
     @media (min-width: 768px) {
       gap: 4rem;
+
+      .btn-toggle-dark {
+        position: absolute;
+        right: 180px;
+      }
     }
 
     @media (min-width: 1400px) {
-      grid-template-columns: auto 1fr auto auto;
-      gap: 1.5rem;
-      .navbar {
-        display: block;
+      display: flex;
+      gap: 0.7rem;
+
+      .btn-toggle-dark {
+        position: absolute;
+        right: 210px;
       }
+      
     }
+  }
+
+  .btn-toggle-dark {
+    position: absolute;
+    right: 120px;
   }
 
   #silicon-logotype {
@@ -480,26 +508,52 @@ header {
     p {
       color: var(--color-text-primary);
       font-weight: 800;
-      font-size: $textsize-XL;
     }
   }
 
   .navbar {
-    display: none;
-    padding-left: 2rem;
-     a {
-      font-size: $nav-textsize;
-      color: var(--color-text-secondary);
-      font-weight: 600;
+    position: absolute;
+    top: 100%;
+    box-shadow: 5px 5px 10px var(--color-gray-300);
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 2rem;
 
-      &:hover {
-        color: var(--color-primary);
+    .link-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem
+    }
+    
+    padding: 3rem;
+    /* padding-left: 2rem; */
+
+    @media (min-width: 1400px) {
+      position: static;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50rem;
+      align-items: center;
+      justify-content: center;
+      box-shadow: none;
+      padding: 0;
+      padding-left: 2rem;
+
+      .link-container {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
       }
-     }
+      
+    }
   }
 }
 
+.hide-nav {
+  transform: translateY(-100%);
+  opacity: 0;
+}
 /* start Hero */
-
 
 
