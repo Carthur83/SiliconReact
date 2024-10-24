@@ -1,36 +1,42 @@
 import React from 'react'
 
 function Header() {
+
+  function darkmode() {
+    console.log('clicked')
+  }
+
+
   return (
     <header>
-      <div class="container">
+      <div className="container">
 
         <a href="index.html" id="silicon-logotype">
           <img src="../images/siliconlogo.svg" alt="Silicon logo" />
           <p className='text-xl'>Silicon</p>
         </a>
 
-        <div class="btn-toggle-dark">
-          <span class="text-dark-mode">Dark mode</span>
-          <label class="switch">
-            <input type="checkbox" />
-            <span class="slider round"></span>
+        <div className="btn-toggle-dark">
+          <span className="text-dark-mode">Dark mode</span>
+          <label className="switch">
+            <input onClick={darkmode} type="checkbox" />
+            <span className="slider round"></span>
           </label>
         </div>
 
-        <button class="btn-menu" aria-label="open menu">
-          <i class="fa-sharp fa-regular fa-bars"></i>
+        <button className="btn-menu" aria-label="open menu">
+          <i className="fa-sharp fa-regular fa-bars"></i>
         </button>
 
-        <nav class="navbar ">
+        <nav className="navbar ">
 
           <div className='link-container'>
             <a href="#" className='text-m links'>Features</a>
             <a href="#" className='text-m links'>Contacts</a>
           </div>
 
-          <a href="#" class="btn-sign-in btn-primary">
-            <i class="fa-regular fa-user"></i>
+          <a href="#" className="btn-sign-in btn-primary">
+            <i className="fa-regular fa-user"></i>
             <span>Sign in / up</span>
           </a>
 
