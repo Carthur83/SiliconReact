@@ -74,14 +74,15 @@
   --shadow-cards: none;
   --shadow-accordion: none;
 
+  .darkmode-on {
+    display: block;
+  }
+  
+  .darkmode-off {
+    display: none;
+  }
 }
 
-.darkmode-on {
-  display: block;
-}
-.darkmode-off {
-  display: none;
-}
 
 * {
   margin: 0;
@@ -96,6 +97,7 @@ body {
   font-weight: 400;
   font-style: normal;
   font-size: 1rem;
+  overflow-x: hidden;
 }
 
 a {
@@ -489,6 +491,7 @@ header {
       .btn-toggle-dark {
         position: absolute;
         right: 210px;
+        z-index: 1000;
       }
       
     }
@@ -496,7 +499,7 @@ header {
 
   .btn-toggle-dark {
     position: absolute;
-    right: 120px;
+    right: 100px;
   }
 
   #silicon-logotype {
@@ -515,18 +518,21 @@ header {
     position: absolute;
     top: 100%;
     box-shadow: 5px 5px 10px var(--color-gray-700);
-    background-color: white;
+    background-color: var(--color-bg-primary);
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
     gap: 2rem;
+    transform: translateY(-200%);
+
+     
 
     .link-container {
       display: flex;
       flex-direction: column;
       gap: 2rem
     }
-    
+
     padding: 3rem;
     /* padding-left: 2rem; */
 
@@ -540,23 +546,23 @@ header {
       box-shadow: none;
       padding: 0;
       padding-left: 2rem;
-
+      transform: translatey(0);
+      
       .link-container {
         display: flex;
         flex-direction: row;
         gap: 1.5rem;
       }
 
-    
-      
     }
   }
+
+  .open-nav {
+    transform: translateY(0);
+   }
 }
 
-.hide-nav {
-  transform: translateY(-100%);
-  opacity: 0;
-}
+
 /* start Hero */
 
 #hero {

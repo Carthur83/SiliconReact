@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-function Header() {
+function Header({switchToDark}) {
+  
+  
+  const [isOpen, setIsOpen] = useState(false);
 
-  function darkmode() {
-    console.log('clicked')
+  function openMenu() {
+
+    setIsOpen(value => !value);
+    console.log(isOpen)
   }
 
 
@@ -19,16 +24,16 @@ function Header() {
         <div className="btn-toggle-dark">
           <span className="text-dark-mode">Dark mode</span>
           <label className="switch">
-            <input onClick={darkmode} type="checkbox" />
+            <input onClick={() => switchToDark()} type="checkbox" />
             <span className="slider round"></span>
           </label>
         </div>
 
-        <button className="btn-menu" aria-label="open menu">
+        <button className="btn-menu" aria-label="open menu" onClick={openMenu}>
           <i className="fa-sharp fa-regular fa-bars"></i>
         </button>
 
-        <nav className="navbar ">
+        <nav className={`navbar ${isOpen ? 'open-nav' : ''}`}>
 
           <div className='link-container'>
             <a href="#" className='text-m links'>Features</a>

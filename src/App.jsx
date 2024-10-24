@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import Logotypes from './components/Logotypes'
@@ -11,9 +11,17 @@ import Subscribe from './components/Subscribe'
 import Footer from './components/Footer'
 
 function App() {
+
+  const [isDarkmodeOn, setIsDarkmodeOn] = useState(false);
+  
+  function switchToDark() {
+    console.log(isDarkmodeOn)
+    return setIsDarkmodeOn(value => !value);
+  }
+
   return (
-    <>
-      <Header />
+    <div className={`${isDarkmodeOn ? 'darkmode' : '' }`}>
+      <Header  switchToDark={switchToDark}/>
       <main>
         <Hero />
         <Logotypes />
@@ -25,7 +33,7 @@ function App() {
         <Subscribe />
       </main>
       <Footer />
-    </>
+    </div>
   )
 }
 
