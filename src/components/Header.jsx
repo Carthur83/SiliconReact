@@ -1,19 +1,44 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import SiliconLogo from '../images/siliconlogo.svg'
 
 
 
-function Header({switchToDark}) {
+function Header() {
   
   
   const [isOpen, setIsOpen] = useState(false);
+  const [isDarkmodeOn, setIsDarkmodeOn] = useState(false);
+  
+  function switchToDark() {
+    const newMode = !isDarkmodeOn;
+    setIsDarkmodeOn(newMode);
 
-  function openMenu() {
-
-    setIsOpen(value => !value);
-    console.log(isOpen)
+    if(newMode) {
+      document.documentElement.setAttribute('data-theme', 'dark')
+      localStorage.setItem('theme','dark')
+    } else {
+      document.documentElement.setAttribute('data-theme', 'light')
+      localStorage.setItem('theme', 'light')
+    }
   }
 
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme')
+
+    if(savedTheme === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark')
+      setIsDarkmodeOn(true)
+    } else {
+      document.documentElement.setAttribute('data-theme', 'light')
+      setIsDarkmodeOn(false)
+    }
+  
+  }, [])
+  
+
+  function openMenu() {
+    setIsOpen(value => !value);
+  }
 
   return (
     <header>
@@ -27,7 +52,7 @@ function Header({switchToDark}) {
         <div className="btn-toggle-dark">
           <span className="text-dark-mode">Dark mode</span>
           <label className="switch">
-            <input onClick={() => switchToDark()} type="checkbox" />
+            <input type="checkbox" onChange={switchToDark} checked={isDarkmodeOn}/>
             <span className="slider round"></span>
           </label>
         </div>

@@ -12,16 +12,9 @@ import Footer from './components/Footer'
 
 function App() {
 
-  const [isDarkmodeOn, setIsDarkmodeOn] = useState(false);
-  
-  function switchToDark() {
-    console.log(isDarkmodeOn)
-    return setIsDarkmodeOn(value => !value);
-  }
-
   return (
-    <div className={`${isDarkmodeOn ? 'darkmode' : '' }`}>
-      <Header  switchToDark={switchToDark}/>
+    <div>
+      <Header />
       <main>
         <Hero />
         <Logotypes />

@@ -16,7 +16,9 @@ const AccordionItem = ({ item }) => {
         </button>
       </div>
       <div className="accordion-content">
+        <div className='expandable'>
         <p>{item.answer}</p>
+        </div>
       </div>
     </div>
   )
