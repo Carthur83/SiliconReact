@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
 import FeaturesCard from './FeaturesCard'
-import MobileImage from '../images/mobile2.svg'
-
 
 
 const Features = () => {
@@ -52,7 +50,7 @@ const Features = () => {
       <div className="container">
 
         <div className="img-mobile">
-          <img src={MobileImage} alt="" />
+          <img src="./images/features/mobile2.svg" alt="" />
         </div>
 
         <div className="content">

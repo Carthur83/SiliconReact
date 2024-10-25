@@ -9,19 +9,19 @@ const Slider = () => {
         <h2 className="headline">How Does It Work?</h2>
 
         <div className="images-mobile">
-          <img src="/images/iphone-transfer-mobile.svg" alt=""/>
+          <img src="/images/slider/iphone-transfer-mobile.svg" alt=""/>
         </div>
 
         <div className="images-tablet">
-          <img src="/images/slider-your-cardsTablet.svg" alt=""/>
-          <img src="/images/iphone-transfer-mobile.svg" alt="" className="transfer"/>
-          <img src="/images/slider-transferTablet.svg" alt=""/>
+          <img src="/images/slider/slider-your-cardsTablet.svg" alt=""/>
+          <img src="/images/slider/iphone-transfer-mobile.svg" alt="" className="transfer"/>
+          <img src="/images/slider/slider-transferTablet.svg" alt=""/>
         </div>
 
         <div className="images-desktop">
-          <img src="/images/SlideriPhone1Desktop.svg" alt=""/>
-          <img src="/images/SlideriPhone2Desktop.svg" alt=""/>
-          <img src="/images/SlideriPhone3Desktop.svg" alt=""/>
+          <img src="/images/slider/SlideriPhone1Desktop.svg" alt=""/>
+          <img src="/images/slider/SlideriPhone2Desktop.svg" alt=""/>
+          <img src="/images/slider/SlideriPhone3Desktop.svg" alt=""/>
         </div>
 
         <div className="subheading-desktop">

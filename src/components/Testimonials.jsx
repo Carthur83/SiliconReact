@@ -11,7 +11,7 @@ const Testimonials = () => {
         </div>
 
         <div className="content-box">
-          <img className="img-quote" src="/images/quotes.svg" alt="quote" />
+          <img className="img-quote" src="/images/testimonials/quotes.svg" alt="quote" />
 
           <div className="stars">
             <i className="fa-solid fa-star checked"></i>
@@ -24,7 +24,7 @@ const Testimonials = () => {
           <p>Sit pretium aliquam tempor, orci dolor sed maecenas rutrum sagittis. Laoreet posuere rhoncus, egestas
             lacus, egestas justo aliquam vel. Nisi vitae lectus hac hendrerit. Montes justo turpis sit amet.</p>
           <div className="user">
-            <img src="/images/user1.svg" alt="user image" />
+            <img src="/images/testimonials/user1.svg" alt="user image" />
             <div className="name">
               <h5>Fannie Summers</h5>
               <p>Designer</p>
@@ -33,7 +33,7 @@ const Testimonials = () => {
         </div>
 
         <div className="content-box">
-          <img className="img-quote" src="/images/quotes.svg" alt="quote" />
+          <img className="img-quote" src="/images/testimonials/quotes.svg" alt="quote" />
 
           <div className="stars">
             <i className="fa-solid fa-star checked"></i>
@@ -47,7 +47,7 @@ const Testimonials = () => {
           <p>Nunc senectus leo vel venenatis accumsan vestibulum sollicitudin amet porttitor. Nisl bibendum nulla
             tincidunt eu enim ornare dictumst sit amet. Dictum pretium dolor tincidunt egestas eget nunc.</p>
           <div className="user">
-            <img src="/images/user2.svg" alt="User image" />
+            <img src="/images/testimonials/user2.svg" alt="User image" />
             <div className="name">
               <h5>Albert Flores</h5>
               <p>Developer</p>

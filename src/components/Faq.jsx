@@ -97,7 +97,7 @@ const Faq = () => {
 
           <div className="contactcard-phone">
             <div>
-              <img src="/images/phone.svg" alt="Phone image"/>
+              <img src="/images/faq/phone.svg" alt="Phone image"/>
             </div>
 
             <p>Still have questions?</p>
@@ -110,7 +110,7 @@ const Faq = () => {
 
           <div className="contactcard-speech">
             <div>
-              <img src="/images/speechbubble.svg" alt="Speech bubble image"/>
+              <img src="/images/faq/speechbubble.svg" alt="Speech bubble image"/>
             </div>
             <p>Don't like phone calls?</p>
             <a href="#">

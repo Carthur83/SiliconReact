@@ -1,10 +1,5 @@
 import React from 'react'
-import GooglePlay from '../images/google-play.svg'
-import GooglePLayDark from '../images/google-play-dark.svg'
-import AppStore from '../images/app-store.svg'
-import AppStoreDark from '../images/appstore-dark.svg'
-import CreditCard from '../images/iPhone-creditcard.svg'
-import Budget from '../images/iPhone-budget.svg'
+
 
 function Hero() {
   return (
@@ -23,12 +18,12 @@ function Hero() {
 
           <div className="buttons">
             <a className="btn-download" href="#">
-              <img src={AppStore} alt="appstore" className="btn-download-image darkmode-off" />
-              <img src={AppStoreDark} alt="appstore" className="btn-download-image darkmode-on" />
+              <img src="/images/hero/google-play.svg" alt="appstore" className="btn-download-image darkmode-off" />
+              <img src="/images/hero/google-play-dark.svg" alt="appstore" className="btn-download-image darkmode-on" />
             </a>
             <a className="btn-download" href="#">
-              <img src={GooglePlay} alt="google play" className="btn-download-image darkmode-off" />
-              <img src={GooglePLayDark} alt="google play" className="btn-download-image darkmode-on" />
+              <img src="/images/hero/app-store.svg" alt="google play" className="btn-download-image darkmode-off" />
+              <img src="/images/hero/appstore-dark.svg" alt="google play" className="btn-download-image darkmode-on" />
             </a>
           </div>
 
@@ -41,8 +36,8 @@ function Hero() {
         </div>
 
         <div className="images">
-          <img className="img-creditcard" src={CreditCard} alt="mobile with creditcard" />
-          <img className="img-budget" src={Budget} alt="mobile with budgetgraph" />
+          <img className="img-creditcard" src="/images/hero/iPhone-creditcard.svg" alt="mobile with creditcard" />
+          <img className="img-budget" src="/images/hero/iPhone-budget.svg" alt="mobile with budgetgraph" />
         </div>
 
       </div>

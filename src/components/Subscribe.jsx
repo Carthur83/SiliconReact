@@ -11,7 +11,7 @@ const Subscribe = () => {
           <div className="headline-box">
 
             <div className="image">
-              <img src="/images/notification.svg" alt="notificationbell" />
+              <img src="/images/subscribe/notification.svg" alt="notificationbell" />
             </div>
 
             <div className="headline">

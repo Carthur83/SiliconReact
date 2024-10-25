@@ -12,15 +12,15 @@ const FeaturesTwo = () => {
 
           <div className="list-box">
             <div className="list-item">
-              <img src="/images/bx-check-circle.svg" alt="checkmark" />
+              <img src="/images/features2/bx-check-circle.svg" alt="checkmark" />
               <span>Banking transactions are free for you</span>
             </div>
             <div className="list-item">
-              <img src="/images/bx-check-circle.svg" alt="checkmark" />
+              <img src="/images/features2/bx-check-circle.svg" alt="checkmark" />
               <span>No monthly cash commission</span>
             </div>
             <div className="list-item">
-              <img src="/images/bx-check-circle.svg" alt="checkmark" />
+              <img src="/images/features2/bx-check-circle.svg" alt="checkmark" />
               <span>Manage payments and transactions online</span>
             </div>
           </div>
@@ -32,11 +32,11 @@ const FeaturesTwo = () => {
         </div>
 
         <div>
-          <img src="/images/Money-graph.svg" alt="app showcase money graph" />
+          <img src="/images/features2/Money-graph.svg" alt="app showcase money graph" />
         </div>
 
         <div>
-          <img src="/images/contacts.svg" alt="app showcase contacts" className="img-contacts" />
+          <img src="/images/features2/contacts.svg" alt="app showcase contacts" className="img-contacts" />
         </div>
 
         <div className="content-box-2">
@@ -46,7 +46,7 @@ const FeaturesTwo = () => {
           <div className="info-boxes">
             <div className="info-box">
               <div className="card-image">
-                <img src="/images/credit-card.svg" alt="credit icon" />
+                <img src="/images/features2/credit-card.svg" alt="credit icon" />
               </div>
               <div>
                 <p>Manage your payments online. Mollis congue egestas egestas fermentum fames.</p>
@@ -55,7 +55,7 @@ const FeaturesTwo = () => {
 
             <div className="info-box">
               <div className="card-image">
-                <img src="/images/wallet.svg" alt="wallet icon" />
+                <img src="/images/features2/wallet.svg" alt="wallet icon" />
               </div>
               <div>
                 <p>A elementur and imperdiet enim, pretium etiam facilisi aenean quam mauris.</p>
