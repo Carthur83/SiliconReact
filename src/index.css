@@ -367,6 +367,8 @@ p {
   width: 30%;
 }
 
+/* Start Accordion */
+
 .accordion {
   grid-area: accordion;
   display: grid;
@@ -430,6 +432,8 @@ p {
 .accordion-item.active .accordion-content {
   display: block;
 }
+
+/* -------------- */
 
 .form {
   display: flex;

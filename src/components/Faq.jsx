@@ -1,6 +1,42 @@
-import React from 'react'
+import React, { useState } from 'react'
+import AccordionItem from './AccordionItem'
 
 const Faq = () => {
+
+  const [accordionContent, setAccordionContent] = useState([
+    {
+      id: 1,
+      question: 'Is any of my personal information stored in the App?',
+      answer: 'Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper. Viverra aliquam arcu, viverra et, cursus. Aliquet pretium cursus adipiscing gravida et consequat lobortis arcu velit. Nibh pharetra fermentum duis accumsan lectus non. Massa cursus molestie lorem scelerisque pellentesque. Nisi, enim, arcu purus gravida adipiscing euismod montes, duis egestas. Vehicula eu etiam quam tristique tincidunt suspendis ut consequat.'
+    },
+    {
+      id: 2,
+      question: 'What formats can I download my transaction history in?',
+      answer: ''
+    },
+    {
+      id: 3,
+      question: 'Can I schedule future transfers?',
+      answer: ''
+    },
+    {
+      id: 4,
+      question: 'When can I use Banking App services?',
+      answer: ''
+    },
+    {
+      id: 5,
+      question: 'Can I create my own password that is easy for me to remember?',
+      answer: ''
+    },
+    {
+      id: 6,
+      question: 'What happens if I forget or lose my password?',
+      answer: ''
+    },
+  ])
+
+
   return (
     <section id="faq">
 
@@ -15,77 +51,11 @@ const Faq = () => {
 
         </div>
 
+
         <div className="accordion">
-
-          <div className="accordion-item radius-8-top">
-            <div className="accordion-header">Is any of my personal information stored in the App?
-              <button className="btn-round" aria-label="open for answer">
-                <i className="fa-regular fa-chevron-down arrow"></i>
-              </button>
-            </div>
-            <div className="accordion-content">
-              <p></p>
-            </div>
-          </div>
-
-          <div className="accordion-item">
-            <div className="accordion-header">What formats can I download my transaction history in?
-              <button className="btn-round" aria-label="open for answer">
-                <i className="fa-regular fa-chevron-down arrow"></i>
-              </button>
-            </div>
-            <div className="accordion-content">
-              <p></p>
-            </div>
-          </div>
-
-          <div className="accordion-item active">
-            <div className="accordion-header">Can I schedule future transfers?
-              <button className="btn-round active">
-                <i className="fa-regular fa-chevron-up"></i>
-              </button>
-            </div>
-            <div className="accordion-content">
-              <p>Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper. Viverra aliquam arcu, viverra et, cursus.
-                Aliquet pretium cursus adipiscing gravida et consequat lobortis arcu velit. Nibh pharetra fermentum duis
-                accumsan lectus non. Massa cursus molestie lorem scelerisque pellentesque. Nisi, enim, arcu purus
-                gravida adipiscing euismod montes, duis egestas. Vehicula eu etiam quam tristique tincidunt suspendisse
-                ut consequat.</p>
-            </div>
-          </div>
-
-          <div className="accordion-item">
-            <div className="accordion-header">When can I use Banking App services?
-              <button className="btn-round" aria-label="open for answer">
-                <i className="fa-regular fa-chevron-down arrow"></i>
-              </button>
-            </div>
-            <div className="accordion-content">
-              <p></p>
-            </div>
-          </div>
-
-          <div className="accordion-item">
-            <div className="accordion-header">Can I create my own password that is easy for me to remember?
-              <button className="btn-round" aria-label="open for answer">
-                <i className="fa-regular fa-chevron-down arrow"></i>
-              </button>
-            </div>
-            <div className="accordion-content">
-              <p></p>
-            </div>
-          </div>
-
-          <div className="accordion-item radius-8-bottom">
-            <div className="accordion-header ">What happens if I forget or lose my password?
-              <button className="btn-round" aria-label="open for answer">
-                <i className="fa-regular fa-chevron-down arrow"></i>
-              </button>
-            </div>
-            <div className="accordion-content">
-              <p></p>
-            </div>
-          </div>
+        {
+          accordionContent.map(item => (<AccordionItem key={item.id} item={item}/>))
+        }
 
         </div>
 
