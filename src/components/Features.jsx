@@ -1,13 +1,58 @@
-import React from 'react'
+import React, { useState } from 'react'
+import FeaturesCard from './FeaturesCard'
+import MobileImage from '../images/mobile2.svg'
+
+
 
 const Features = () => {
+
+  const [cardContent, setCardContent] = useState([
+    {
+    id: 1,
+    img: './images/features/credit-card.svg',
+    imgAlt: 'Credit card icon',
+    title: 'Easy Payments',
+    textContent: 'Id mollis consectetur congue egestas egestas suspendisse blandit justo.'
+    },
+    {
+    id: 2,
+    img: './images/features/shield.svg',
+    title: 'Data Security',
+    textContent: 'Augue pulvinar justo, fermentum fames aliquam accumsan vestibulum non.'
+    },
+    {
+    id: 3,
+    img: './images/features/bars-graphic.svg',
+    title: 'Cost Statistics',
+    textContent: 'Mattis urna ultricies non amet, purus in auctor non. Odio vulputate ac nibh.'
+    },
+    {
+    id: 4,
+    img: './images/features/communication.svg',
+    title: 'Support 24/7',
+    textContent: 'A elementum, imperdiet enim, pretium etiam facilisi in aenean quam mauris.'
+    },
+    {
+    id: 5,
+    img: './images/features/wallet.svg',
+    title: 'Regular Cashback',
+    textContent: 'Sit facilisis dolor arcu, fermentum vestibulum arcu elementum imperdiet eleifend.'
+    },
+    {
+    id: 6,
+    img: './images/features/happy.svg',
+    title: 'Top Standards',
+    textContent: 'Faucibus cursus maecenas lorem cursus nibh. Sociis sit risus id. Sit facilisis dolor arcu.'
+    }
+    ]);
+
   return (
     <section id="features">
 
       <div className="container">
 
         <div className="img-mobile">
-          <img src="/images/mobile2.svg" alt="" />
+          <img src={MobileImage} alt="" />
         </div>
 
         <div className="content">
@@ -16,69 +61,13 @@ const Features = () => {
             facilisis
             ultrices. Pellentesque volutpat ligula est. Mattis fermentum, at nec lacus.</p>
         </div>
+        
+        {
+          cardContent.map(content => (<FeaturesCard key={content.id} content={content}/>))
+        }
 
-        <div className="cards">
-          <div className="card-image">
-            <img src="/images/credit-card.svg" alt="" />
-          </div>
-          <div className="text">
-            <h3>Easy Payments</h3>
-            <p>Id mollis consectetur congue egestas egestas suspendisse blandit justo.</p>
-          </div>
         </div>
-
-        <div className="cards">
-          <div className="card-image">
-            <img src="/images/shield.svg" alt="" />
-          </div>
-          <div className="text">
-            <h3>Data Security</h3>
-            <p>Augue pulvinar justo, fermentum fames aliquam accumsan vestibulum non. </p>
-          </div>
-        </div>
-
-        <div className="cards">
-          <div className="card-image">
-            <img src="/images/bars-graphic.svg" alt="" />
-          </div>
-          <div className="text">
-            <h3>Cost Statistics</h3>
-            <p>Id mollis consectetur congue egestas egestas suspendisse blandit justo. </p>
-          </div>
-        </div>
-
-        <div className="cards">
-          <div className="card-image">
-            <img src="/images/communication.svg" alt="" />
-          </div>
-          <div className="text">
-            <h3>Support 24/7</h3>
-            <p>A elementum, imperdiet enim, pretium etiam facilisi in aenean quam mauris.</p>
-          </div>
-        </div>
-
-        <div className="cards">
-          <div className="card-image">
-            <img src="/images/wallet.svg" alt="" />
-          </div>
-          <div className="text">
-            <h3>Regular Cashback</h3>
-            <p>Sit facilisis dolor arcu, fermentum vestibulum arcu elementum imperdiet eleifend.</p>
-          </div>
-        </div>
-
-        <div className="cards">
-          <div className="card-image">
-            <img src="/images/happy.svg" alt="" />
-          </div>
-          <div className="text">
-            <h3>Top Standards</h3>
-            <p>Faucibus cursus maecenas lorem cursus nibh. Sociis sit risus id. Sit facilisis dolor arcu.</p>
-          </div>
-        </div>
-
-      </div>
-
+      
     </section>
 
   )

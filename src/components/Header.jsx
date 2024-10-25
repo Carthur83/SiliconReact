@@ -1,4 +1,7 @@
 import React, { useState } from 'react'
+import SiliconLogo from '../images/siliconlogo.svg'
+
+
 
 function Header({switchToDark}) {
   
@@ -17,7 +20,7 @@ function Header({switchToDark}) {
       <div className="container">
 
         <a href="index.html" id="silicon-logotype">
-          <img src="../images/siliconlogo.svg" alt="Silicon logo" />
+          <img src={SiliconLogo} alt="Silicon logo" />
           <p className='text-xl'>Silicon</p>
         </a>
 
