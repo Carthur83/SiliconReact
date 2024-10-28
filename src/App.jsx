@@ -13,7 +13,7 @@ import Footer from './components/Footer'
 function App() {
 
   return (
-    <div>
+    <>
       <Header />
       <main>
         <Hero />
@@ -26,7 +26,7 @@ function App() {
         <Subscribe />
       </main>
       <Footer />
-    </div>
+    </>
   )
 }
 
