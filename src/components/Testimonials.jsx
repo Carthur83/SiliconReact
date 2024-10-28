@@ -1,6 +1,20 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import TestimonialsCardItem from './TestimonialsCardItem'
 
 const Testimonials = () => {
+
+  const [testimonials, setTestimonials] = useState([])
+
+  const fetchData = async () => {
+    const res = await fetch('https://win24-assignment.azurewebsites.net/api/testimonials')
+    const data = await res.json();
+    setTestimonials(data);
+  }
+
+  useEffect(() => {
+    fetchData();
+  },[])
+
   return (
     <section id="testimonials">
 
@@ -10,50 +24,9 @@ const Testimonials = () => {
           <h3>Clients are Loving Our App</h3>
         </div>
 
-        <div className="content-box">
-          <img className="img-quote" src="/images/testimonials/quotes.svg" alt="quote" />
-
-          <div className="stars">
-            <i className="fa-solid fa-star checked"></i>
-            <i className="fa-solid fa-star checked"></i>
-            <i className="fa-solid fa-star checked"></i>
-            <i className="fa-solid fa-star checked"></i>
-            <i className="fa-regular fa-star"></i>
-          </div>
-
-          <p>Sit pretium aliquam tempor, orci dolor sed maecenas rutrum sagittis. Laoreet posuere rhoncus, egestas
-            lacus, egestas justo aliquam vel. Nisi vitae lectus hac hendrerit. Montes justo turpis sit amet.</p>
-          <div className="user">
-            <img src="/images/testimonials/user1.svg" alt="user image" />
-            <div className="name">
-              <h5>Fannie Summers</h5>
-              <p>Designer</p>
-            </div>
-          </div>
-        </div>
-
-        <div className="content-box">
-          <img className="img-quote" src="/images/testimonials/quotes.svg" alt="quote" />
-
-          <div className="stars">
-            <i className="fa-solid fa-star checked"></i>
-            <i className="fa-solid fa-star checked"></i>
-            <i className="fa-solid fa-star checked"></i>
-            <i className="fa-solid fa-star checked"></i>
-            <i className="fa-solid fa-star checked"></i>
-
-          </div>
-
-          <p>Nunc senectus leo vel venenatis accumsan vestibulum sollicitudin amet porttitor. Nisl bibendum nulla
-            tincidunt eu enim ornare dictumst sit amet. Dictum pretium dolor tincidunt egestas eget nunc.</p>
-          <div className="user">
-            <img src="/images/testimonials/user2.svg" alt="User image" />
-            <div className="name">
-              <h5>Albert Flores</h5>
-              <p>Developer</p>
-            </div>
-          </div>
-        </div>
+        {
+          testimonials.map(testimonial => (<TestimonialsCardItem key={testimonial.id} testimonial={testimonial}/>))
+        }
 
       </div>
 
