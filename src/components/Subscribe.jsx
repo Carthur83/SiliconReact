@@ -1,6 +1,39 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Subscribe = () => {
+
+  const [formInput, setFormInput] = useState({ email: '' });
+  const [subscribeMessage, setSubscribeMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
+
+  function handleOnChange(e) {
+    const { name, value } = e.target;
+    setFormInput({...formInput, [name]: value});
+  }
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    
+    const res = await fetch('https://win24-assignment.azurewebsites.net/api/forms/subscribe',{
+      method: 'post',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formInput)
+    })
+
+    if (res.ok) {
+      setErrorMessage('')
+      setSubscribeMessage('Thank you for subscribing to our newsletter');
+      setFormInput({email: ''})
+    } else {
+      setErrorMessage('Please enter a valid email address to subscribe!')
+      setFormInput({email: ''})
+      setSubscribeMessage('')
+    }
+  }
+
+
   return (
     <section id="subscribe">
 
@@ -21,11 +54,14 @@ const Subscribe = () => {
 
           </div>
 
-          <div className="form">
+          <form className="form" onSubmit={handleSubmit} noValidate>
             <i className="fa-regular fa-envelope icon"></i>
-            <input className="form-input" type="email" name="email" placeholder="Your Email" />
+            <input className="form-input" type="email" name="email" placeholder="Your Email" onChange={handleOnChange} value={formInput.email} required/>
             <button className="btn-subscribe btn-primary">Subscribe</button>
-          </div>
+          </form>
+
+          <p className='error-message'>{errorMessage}</p>
+          <p className='subscribe-text'>{subscribeMessage}</p>
 
         </div>
       </div>

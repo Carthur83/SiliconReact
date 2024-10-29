@@ -6,6 +6,7 @@
   --color-yellow: #FFBA08;
   --color-green: #22C55E;
   --color-transparent: transparent;
+  --color-error: #EF4444;
 
   --color-white: #FFFFFF;
   --color-gray-100: #F3F6FF;
@@ -1349,6 +1350,19 @@ header {
     color: var(--color-gray-500);
   }
 }
+
+.error-message {
+  color: var(--color-error);
+  padding-left: .5rem;
+  padding-top: .5rem;
+}
+
+.subscribe-text {
+  text-align: center;
+  padding-top: 1rem;
+  color: var(--color-primary);
+}
+
 
 /* Start Footer Section */
 
