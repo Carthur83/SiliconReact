@@ -19,6 +19,7 @@
   --color-bg-hero-linear: linear-gradient(0deg, rgba(99,102,241,0.1) 0%, rgba(218,70,239,0.05) 42%, rgba(241,244,253,0.07) 83%);
   --color-bg-primary: var(--color-white);
   --color-bg-second: var(--color-gray-100);
+  --color-bg-form: var(--color-white);
 
   --color-text-primary: var(--color-gray-900);
   --color-text-secondary: var(--color-gray-700);
@@ -66,6 +67,7 @@
   --color-bg-hero-linear: linear-gradient(0deg, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 50%, rgb(19, 16, 34, 0.01) 100%);
   --color-bg-primary: var(--color-gray-900);
   --color-bg-second: rgb(243, 246, 255, 0.04);
+  --color-bg-form: #33354d6b;
 
   --color-text-primary: var(--color-white);
   --color-text-secondary: #ffffffaf;

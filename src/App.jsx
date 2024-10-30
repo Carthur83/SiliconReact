@@ -1,32 +1,26 @@
-import React, { useState } from 'react'
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import ContactPage from "./views/ContactPage"
+import Home from "./views/Home"
 import Header from './components/Header'
-import Hero from './components/Hero'
-import Logotypes from './components/Logotypes'
-import Features from './components/Features'
-import Slider from './components/Slider'
-import FeaturesTwo from './components/FeaturesTwo'
-import Testimonials from './components/Testimonials'
-import Faq from './components/Faq'
-import Subscribe from './components/Subscribe'
 import Footer from './components/Footer'
+import Features from "./views/Features"
+import SignInUp from "./views/SignInUp"
 
 function App() {
 
   return (
-    <>
+    <BrowserRouter>
       <Header />
       <main>
-        <Hero />
-        <Logotypes />
-        <Features />
-        <Slider />
-        <FeaturesTwo />
-        <Testimonials />
-        <Faq />
-        <Subscribe />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/features" element={<Features />} />
+          <Route path="/contactpage" element={<ContactPage />} />
+          <Route path="/signinup" element={<SignInUp />} />
+        </Routes>
       </main>
       <Footer />
-    </>
+    </BrowserRouter>
   )
 }
 

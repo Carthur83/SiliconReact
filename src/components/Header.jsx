@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import SiliconLogo from '../images/siliconlogo.svg'
+import { Link, NavLink } from 'react-router-dom';
 
 
 
@@ -44,10 +45,10 @@ function Header() {
     <header>
       <div className="container">
 
-        <a href="index.html" id="silicon-logotype">
+        <Link to="/" id="silicon-logotype">
           <img src={SiliconLogo} alt="Silicon logo" />
           <p className='text-xl'>Silicon</p>
-        </a>
+        </Link>
 
         <div className="btn-toggle-dark">
           <span className="text-dark-mode">Dark mode</span>
@@ -64,14 +65,15 @@ function Header() {
         <nav className={`navbar ${isOpen ? 'open-nav' : ''}`}>
 
           <div className='link-container'>
-            <a href="#" className='text-m links'>Features</a>
-            <a href="#" className='text-m links'>Contacts</a>
+            <NavLink to="/" className='text-m links'>Home</NavLink>
+            <NavLink to="/features" className='text-m links'>Features</NavLink>
+            <NavLink to="/contactpage" className='text-m links'>Contact</NavLink>
           </div>
 
-          <a href="#" className="btn-sign-in btn-primary">
+          <Link to="/signinup" className="btn-sign-in btn-primary">
             <i className="fa-regular fa-user"></i>
             <span>Sign in / up</span>
-          </a>
+          </Link>
 
         </nav>
 

@@ -514,7 +514,7 @@ header {
       position: static;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 50rem;
+      gap: 45.9rem;
       align-items: center;
       justify-content: center;
       box-shadow: none;
