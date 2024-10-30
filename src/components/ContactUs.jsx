@@ -62,9 +62,15 @@ const ContactsUs = () => {
               <input type="email" id="email" className="form-input" />
             </div>
 
+            {/* Dropdown from developer.mozilla.org */}
             <div className="input-group">
               <label for="specialist" className="form-label">Specialist</label>
-              <input type="text" id="specialist" className="form-input" />
+              <select name='specialist' className="form-input" >
+              <option value="">--Please choose an option--</option>
+                <option value="">Specialist 1</option>
+                <option value="">Specialist 2</option>
+                <option value="">Specialist 3</option>
+              </select>
             </div>
 
             <button className="btn-primary btn-appointment">Make an appointment</button>

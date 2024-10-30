@@ -20,6 +20,7 @@
   --color-bg-primary: var(--color-white);
   --color-bg-second: var(--color-gray-100);
   --color-bg-form: var(--color-white);
+  --color-bg-dropdown: var(--color-white);
 
   --color-text-primary: var(--color-gray-900);
   --color-text-secondary: var(--color-gray-700);
@@ -68,6 +69,7 @@
   --color-bg-primary: var(--color-gray-900);
   --color-bg-second: rgb(243, 246, 255, 0.04);
   --color-bg-form: #33354d6b;
+  --color-bg-dropdown: var(--color-gray-800);
 
   --color-text-primary: var(--color-white);
   --color-text-secondary: #ffffffaf;

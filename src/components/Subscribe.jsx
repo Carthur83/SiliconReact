@@ -8,13 +8,13 @@ const Subscribe = () => {
 
   function handleOnChange(e) {
     const { name, value } = e.target;
-    setFormInput({...formInput, [name]: value});
+    setFormInput({ ...formInput, [name]: value });
   }
 
   async function handleSubmit(e) {
     e.preventDefault();
-    
-    const res = await fetch('https://win24-assignment.azurewebsites.net/api/forms/subscribe',{
+
+    const res = await fetch('https://win24-assignment.azurewebsites.net/api/forms/subscribe', {
       method: 'post',
       headers: {
         'Content-Type': 'application/json'
@@ -25,10 +25,10 @@ const Subscribe = () => {
     if (res.ok) {
       setErrorMessage('')
       setSubscribeMessage('Thank you for subscribing to our newsletter');
-      setFormInput({email: ''})
+      setFormInput({ email: '' })
     } else {
       setErrorMessage('Please enter a valid email address to subscribe!')
-      setFormInput({email: ''})
+      setFormInput({ email: '' })
       setSubscribeMessage('')
     }
   }
@@ -56,12 +56,14 @@ const Subscribe = () => {
 
           <form className="form" onSubmit={handleSubmit} noValidate>
             <i className="fa-regular fa-envelope icon"></i>
-            <input className="form-input" type="email" name="email" placeholder="Your Email" onChange={handleOnChange} value={formInput.email} required/>
+            <input className="form-input" type="email" name="email" placeholder="Your Email" onChange={handleOnChange} value={formInput.email} required />
             <button className="btn-subscribe btn-primary">Subscribe</button>
           </form>
 
-          <p className='error-message'>{errorMessage}</p>
-          <p className='subscribe-text'>{subscribeMessage}</p>
+          <div className='message-box'> 
+            <p className='error-message'>{errorMessage}</p>
+            <p className='subscribe-text'>{subscribeMessage}</p>
+          </div>
 
         </div>
       </div>

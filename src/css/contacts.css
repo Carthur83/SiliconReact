@@ -28,7 +28,6 @@ p {
   line-height: 1.6;
 }
 
-
 .btn-primary {
   display: flex;
   justify-content: center;
@@ -53,7 +52,6 @@ p {
   padding: 1.1rem 0;
   border-radius: 8px;
 }
-
 
 .container {
   width: 100%;
@@ -86,8 +84,7 @@ p {
       padding-block: 3rem;
       flex-direction: row;
       position: relative;
-    }
-    
+    }    
   }
 
   .contact-container {
@@ -104,8 +101,7 @@ p {
     }
 
     @media (min-width: 1400px) {
-      align-items: flex-start;
-    
+      align-items: flex-start;  
     }
   }
 
@@ -154,11 +150,10 @@ p {
       position: absolute;
       right: 35px;
       top: 120px;
-      max-width: 40rem;  
+      min-width: 40rem;  
       padding: 4rem;
       box-shadow: var(--shadow-cards);
     }
-
   }
 
   .appointment-form {
@@ -170,20 +165,28 @@ p {
 
     .form-label {
     display: block;
-    font-size: 1rem;
     font-weight: 600;
+    color: var(--color-text-primary);
     }
 
     .form-input {
       width: 100%;
-      font-size: 2.8rem;
       border-radius: 8px;
       border: 1px solid var(--color-border-input); 
       margin-top: .4rem;
       background-color: var(--color-bg-input-desktop);
-       
+      font-size: 1.2rem;
+      padding: .8rem;
+      color: var(--color-text-primary);
+      
+      option {
+        background-color: var(--color-bg-dropdown);
+      }
     }
-
+    
+    option {
+      background-color: var(--color-bg-input-desktop);
+    }
   }
 
   div .input-group:last-of-type {
@@ -210,8 +213,7 @@ p {
       margin-top: 11rem;
     }
   }
-
-  
+ 
   .map-container {
     display: none;
 
@@ -242,7 +244,6 @@ p {
 
   }
 
-  
   .address {
     display: flex;
     gap: .5rem;
