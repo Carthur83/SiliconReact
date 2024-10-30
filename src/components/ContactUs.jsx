@@ -1,16 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Breadcrumb from './Breadcrumb'
 
 const ContactsUs = () => {
   return (
-
+    <>
     <section id="contacts">
 
       <div className="container">
 
         <div className="contact-container">
 
-          <p>Homepage</p>
+          <Breadcrumb />
           <h1>Contact Us</h1>
 
           <div className="content-card">
@@ -79,6 +80,7 @@ const ContactsUs = () => {
         </div>
       </div>
     </section>
+    </>
   )
 }
 

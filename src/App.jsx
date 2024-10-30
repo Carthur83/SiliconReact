@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import ContactPage from "./views/ContactPage"
+import Contact from "./views/Contact"
 import Home from "./views/Home"
 import Header from './components/Header'
 import Footer from './components/Footer'
-import Features from "./views/Features"
+import AppFeatures from "./views/AppFeatures"
 import SignInUp from "./views/SignInUp"
 
 function App() {
@@ -14,8 +14,8 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/features" element={<Features />} />
-          <Route path="/contactpage" element={<ContactPage />} />
+          <Route path="/appfeatures" element={<AppFeatures />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/signinup" element={<SignInUp />} />
         </Routes>
       </main>

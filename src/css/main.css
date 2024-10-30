@@ -139,6 +139,10 @@ p {
   font-size: 0.75rem;
 }
 
+.active {
+  color: var(--color-primary);
+}
+
 .container {
   width: 100%;
   padding: 0 1.5rem;
@@ -1405,5 +1409,24 @@ header {
   color: var(--color-gray-600);
   padding-inline: 1rem;
 }
+
+.breadcrumb {
+  display: flex;
+  list-style: none;
+  gap: .5rem;
+
+  span {
+    color: var(--color-primary);
+  }
+
+  a {
+    color: #817c7cc9;
+  }
+  
+  .img-container {
+    display: grid;
+    align-items: center;
+  }
+ }
 
 
