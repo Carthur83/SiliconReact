@@ -48,7 +48,7 @@ p {
   }
 }
 
-.btn-appointment {
+.btn-contact {
   padding: 1.1rem 0;
   border-radius: 8px;
 }
@@ -93,8 +93,6 @@ p {
    gap: 3rem;
    margin-bottom: 6rem;
 
-
-   
     h1 {
       text-align: center;
       padding-bottom: 1.5rem;
@@ -146,6 +144,7 @@ p {
     padding: 2rem;
     margin-bottom: 1rem;
     color: var(--color-text-primary);
+    position: absolute;
 
     @media (min-width: 1400px) {
       position: absolute;
@@ -157,8 +156,9 @@ p {
     }
   }
 
-  .appointment-form {
-    display: grid;
+  .contact-form {
+    display: flex;
+    flex-direction: column;
     gap: 1.8rem;
   }
 
@@ -190,12 +190,35 @@ p {
     }
   }
 
-  div .input-group:last-of-type {
-    margin-bottom: 4rem; 
+  .btn-contact {
+    margin-top: 4rem; 
 
     @media (min-width: 1400px) {
-      margin-bottom: 7rem;       
+      margin-top: 7rem;       
     }
+  }
+
+  .message-box {
+    display: none;
+    background-color: rgba(16, 240, 16, 0.459);
+    text-align: center;
+    border-radius: 8px;
+    padding: .5rem;
+    max-width: 85%;
+    position: absolute;
+    bottom: 95px;
+
+    @media (min-width: 1400px) {
+      bottom: 160px;
+      left: 85px;
+      padding: 1rem;
+
+    }
+
+  }
+
+  .show-message {
+    display: block;
   }
 }
 

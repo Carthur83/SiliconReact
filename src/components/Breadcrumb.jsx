@@ -18,17 +18,17 @@ const Breadcrumb = () => {
         </li>
         {
           pathnames.map((value, index) => {
-            const to = `/${pathnames.slice(0, index + 1).join('/')}`;
-            
+            const to = `/${pathnames.slice(0, index + 1).join('/')}`
+
             return (
-              <>
+
+              <li key={to}>
                 <img src="/images/contacts/bx-chevrons-right.svg" alt="" />
-                <li key={to}>
-                  {index === pathnames.length - 1
-                    ? (<span>{value.replace(/-/g, ' ')}</span>)
-                    : (<Link to={to}>{value.replace(/-/g, ' ')}</Link>)}
-                </li>
-              </>
+                {index === pathnames.length - 1
+                  ? (<span>{value.replace(/-/g, ' ')}</span>)
+                  : (<Link to={to}>{value.replace(/-/g, ' ')}</Link>)}
+              </li>
+
             );
           })
         }

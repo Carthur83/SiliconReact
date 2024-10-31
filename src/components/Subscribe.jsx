@@ -10,7 +10,7 @@ const Subscribe = () => {
     const { name, value } = e.target;
     setFormInput({ ...formInput, [name]: value });
   }
-
+  
   async function handleSubmit(e) {
     e.preventDefault();
 
