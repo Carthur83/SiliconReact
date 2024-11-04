@@ -1427,6 +1427,12 @@ header {
     display: grid;
     align-items: center;
   }
+
+  .list {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+  }
  }
 
 

@@ -1,19 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext } from 'react'
 import TestimonialsCardItem from './TestimonialsCardItem'
+import { AppContext } from '../contexts/AppContext' 
 
 const Testimonials = () => {
 
-  const [testimonials, setTestimonials] = useState([])
-
-  const fetchData = async () => {
-    const res = await fetch('https://win24-assignment.azurewebsites.net/api/testimonials')
-    const data = await res.json();
-    setTestimonials(data);
-  }
-
-  useEffect(() => {
-    fetchData();
-  },[])
+  const { testimonials } = useContext(AppContext);
 
   return (
     <section id="testimonials">

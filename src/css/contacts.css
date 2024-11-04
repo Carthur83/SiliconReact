@@ -144,8 +144,7 @@ p {
     padding: 2rem;
     margin-bottom: 1rem;
     color: var(--color-text-primary);
-    position: absolute;
-
+    
     @media (min-width: 1400px) {
       position: absolute;
       right: 35px;
@@ -160,6 +159,7 @@ p {
     display: flex;
     flex-direction: column;
     gap: 1.8rem;
+    position: relative;
   }
 
   .input-group {
@@ -191,7 +191,7 @@ p {
   }
 
   .btn-contact {
-    margin-top: 4rem; 
+    margin-top: 5rem; 
 
     @media (min-width: 1400px) {
       margin-top: 7rem;       
@@ -204,17 +204,14 @@ p {
     text-align: center;
     border-radius: 8px;
     padding: .5rem;
-    max-width: 85%;
     position: absolute;
-    bottom: 95px;
+    bottom: 72px;
+    width: 100%;
 
     @media (min-width: 1400px) {
-      bottom: 160px;
-      left: 85px;
+      bottom: 95px;
       padding: 1rem;
-
     }
-
   }
 
   .show-message {
@@ -310,5 +307,4 @@ p {
       justify-content: start;
     }
   }
-
 }

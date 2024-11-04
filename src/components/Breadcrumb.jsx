@@ -22,7 +22,7 @@ const Breadcrumb = () => {
 
             return (
 
-              <li key={to}>
+              <li key={to} className='list'>
                 <img src="/images/contacts/bx-chevrons-right.svg" alt="" />
                 {index === pathnames.length - 1
                   ? (<span>{value.replace(/-/g, ' ')}</span>)

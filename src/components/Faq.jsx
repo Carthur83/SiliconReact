@@ -1,20 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import React, { useContext } from 'react'
 import AccordionItem from './AccordionItem'
+import { AppContext } from '../contexts/AppContext'
 
 const Faq = () => {
-
-  const [faqItems, setFaqItems] = useState([])
-
-  const fetchData = async () => {
-    const res = await fetch('https://win24-assignment.azurewebsites.net/api/faq');
-    const data = await res.json();
-    setFaqItems(data);
-  }
-
-  useEffect(() => {
-    fetchData();
-  },[])
-
+  const { accordionItems } = useContext(AppContext);
 
   return (
     <section id="faq">
@@ -33,7 +22,7 @@ const Faq = () => {
 
         <div className="accordion">
         {
-          faqItems.length > 0 && faqItems.map((item) => (<AccordionItem key={item.id} item={item}/>))
+          accordionItems.map((item) => (<AccordionItem key={item.id} item={item}/>))
         }
 
         </div>

@@ -1,38 +1,22 @@
-import React, { useState } from 'react'
+import React, { useContext } from 'react'
+import { AppContext } from '../contexts/AppContext'
 
 const Subscribe = () => {
-
-  const [formInput, setFormInput] = useState({ email: '' });
-  const [subscribeMessage, setSubscribeMessage] = useState('');
-  const [errorMessage, setErrorMessage] = useState('');
+  const { handleSubscribe, formInput, setFormInput, isResponseOk } = useContext(AppContext);
 
   function handleOnChange(e) {
     const { name, value } = e.target;
     setFormInput({ ...formInput, [name]: value });
   }
-  
+
   async function handleSubmit(e) {
     e.preventDefault();
 
-    const res = await fetch('https://win24-assignment.azurewebsites.net/api/forms/subscribe', {
-      method: 'post',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(formInput)
-    })
+    await handleSubscribe();
 
-    if (res.ok) {
-      setErrorMessage('')
-      setSubscribeMessage('Thank you for subscribing to our newsletter');
-      setFormInput({ email: '' })
-    } else {
-      setErrorMessage('Please enter a valid email address to subscribe!')
-      setFormInput({ email: '' })
-      setSubscribeMessage('')
-    }
+    setFormInput({ email: '' })
+
   }
-
 
   return (
     <section id="subscribe">
@@ -60,9 +44,9 @@ const Subscribe = () => {
             <button className="btn-subscribe btn-primary">Subscribe</button>
           </form>
 
-          <div className='message-box'> 
-            <p className='error-message'>{errorMessage}</p>
-            <p className='subscribe-text'>{subscribeMessage}</p>
+          <div className='message-box'>
+            {isResponseOk === 'true' && <p className='subscribe-text'>Thank you for subscribing to our newsletter</p>}
+            {isResponseOk === 'false' && <p className='error-message'>Please enter a valid email address to subscribe!</p>}
           </div>
 
         </div>
