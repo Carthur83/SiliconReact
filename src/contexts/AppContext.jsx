@@ -66,7 +66,7 @@ const AppProvider = ({children}) => {
   
   return (
     <AppContext.Provider value={{ accordionItems, testimonials, handleSubscribe, formInput, setFormInput, isResponseOk,
-      handleContactForm, isFormSubmitted, contactFormData, setContactFormData
+      handleContactForm, isFormSubmitted, setIsFormSubmitted, contactFormData, setContactFormData
      }} >
       {children}
     </AppContext.Provider> 

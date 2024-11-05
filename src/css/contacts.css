@@ -184,6 +184,13 @@ p {
         background-color: var(--color-bg-dropdown);
       }
     }
+
+    .error-message {
+      color: var(--color-error);
+      font-size: .9rem;
+      font-weight: 500;
+      text-align: left;
+    }
     
     option {
       background-color: var(--color-bg-input-desktop);
