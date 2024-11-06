@@ -56,8 +56,7 @@ const ContactForm = () => {
       setContactFormData({ fullName: '', email: '', specialist: ''})
     } else {
       setIsFormSubmitted('false');
-    }
-        
+    }        
   }
 
   return (

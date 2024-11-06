@@ -420,6 +420,7 @@ p {
     margin: auto 0;
   }
 }
+
 .form .form-input {
   width: 100%;
   font-size: 16px;
@@ -1358,10 +1359,10 @@ header {
 }
 
 .message-box {
-  grid-column: span 2;
+  grid-column: 2;
 }
 
-.error-message {
+.error {
   color: var(--color-error);
   padding-left: .5rem;
   padding-top: .5rem;
@@ -1369,28 +1370,21 @@ header {
 
   @media (min-width: 768px) {
     padding-top: 0;
-    text-align: end;
   }
 
   @media (min-width: 1400px) {
-    padding-right: 4rem;
+    padding-right: 1rem;
   }
 }
 
 .subscribe-text {
-  text-align: center;
   padding-top: 1rem;
   color: var(--color-primary);
 
   @media (min-width: 768px) {
     padding-top: 0;
-    text-align: end;
   }
 
-  @media (min-width: 1400px) {
-    padding-right: 6rem;
-    padding-top: 1rem;
-  }
 }
 
 

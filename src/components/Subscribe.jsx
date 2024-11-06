@@ -1,21 +1,47 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { AppContext } from '../contexts/AppContext'
 
 const Subscribe = () => {
-  const { handleSubscribe, formInput, setFormInput, isResponseOk } = useContext(AppContext);
+  const { handleSubscribe, formInput, setFormInput, isResponseOk, setIsResponseOk } = useContext(AppContext);
+  const [errors, setErrors] = useState({});
+
+  const validateField = (name, value) => {
+    let error = '';
+
+    if (!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(value)) {
+      error = "Please enter a valid email address";
+    }
+
+    setErrors(prevErrors => ({...prevErrors, [name]: error}));
+  }
+
+  const validateForm = () => {
+    const newErrors = {};
+
+    if (!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(formInput.email)) {
+      newErrors.email = "Please enter a valid email address";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  }
 
   function handleOnChange(e) {
     const { name, value } = e.target;
     setFormInput({ ...formInput, [name]: value });
+
+    validateField(name, value);
   }
 
-  async function handleSubmit(e) {
+  function handleSubmit(e) {
     e.preventDefault();
 
-    await handleSubscribe();
-
-    setFormInput({ email: '' })
-
+    if (validateForm()) {
+      handleSubscribe();
+      setFormInput({ email: '' });
+    } else {
+      setIsResponseOk('false');
+    }
   }
 
   return (
@@ -45,8 +71,8 @@ const Subscribe = () => {
           </form>
 
           <div className='message-box'>
+          <p className='error'>{errors.email}</p>
             {isResponseOk === 'true' && <p className='subscribe-text'>Thank you for subscribing to our newsletter</p>}
-            {isResponseOk === 'false' && <p className='error-message'>Please enter a valid email address to subscribe!</p>}
           </div>
 
         </div>

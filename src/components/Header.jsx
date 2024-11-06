@@ -65,12 +65,12 @@ function Header() {
         <nav className={`navbar ${isOpen ? 'open-nav' : ''}`}>
 
           <div className='link-container'>
-            <Link to="/" className='text-m links'>Home</Link>
-            <NavLink to="/appfeatures" className='text-m links'>Features</NavLink>
-            <NavLink to="/contact" className='text-m links'>Contact</NavLink>
+            <Link onClick={openMenu} to="/" className='text-m links'>Home</Link>
+            <NavLink onClick={openMenu} to="/appfeatures" className='text-m links'>Features</NavLink>
+            <NavLink onClick={openMenu} to="/contact" className='text-m links'>Contact</NavLink>
           </div>
 
-          <Link to="/signinup" className="btn-sign-in btn-primary">
+          <Link onClick={openMenu} to="/signinup" className="btn-sign-in btn-primary">
             <i className="fa-regular fa-user"></i>
             <span>Sign in / up</span>
           </Link>

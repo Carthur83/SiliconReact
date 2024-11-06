@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import AccordionItem from './AccordionItem'
 import { AppContext } from '../contexts/AppContext'
+import { Link } from 'react-router-dom';
 
 const Faq = () => {
   const { accordionItems } = useContext(AppContext);
@@ -27,9 +28,9 @@ const Faq = () => {
 
         </div>
 
-        <a href="#" className="btn-contact-us btn-primary">
+        <Link href="#" className="btn-contact-us btn-primary">
           <span>Contact us now</span>
-        </a>
+        </Link>
 
         <div className="contact-cards">
 
@@ -40,10 +41,10 @@ const Faq = () => {
 
             <p>Still have questions?</p>
 
-            <a href="#">
+            <Link href="#">
               <span>Contact us</span>
               <i className="fa-solid fa-arrow-right"></i>
-            </a>
+            </Link>
           </div>
 
           <div className="contactcard-speech">
@@ -51,10 +52,10 @@ const Faq = () => {
               <img src="/images/faq/speechbubble.svg" alt="Speech bubble image"/>
             </div>
             <p>Don't like phone calls?</p>
-            <a href="#">
+            <Link href="#">
               <span>Contact us</span>
               <i className="fa-solid fa-arrow-right"></i>
-            </a>
+            </Link>
           </div>
 
         </div>

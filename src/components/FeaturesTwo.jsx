@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const FeaturesTwo = () => {
   return (
@@ -25,10 +26,10 @@ const FeaturesTwo = () => {
             </div>
           </div>
 
-          <a href="#" className="btn-learn-more btn-primary">
+          <Link href="#" className="btn-learn-more btn-primary">
             <span>Learn more</span>
             <i className="fa-solid fa-arrow-right"></i>
-          </a>
+          </Link>
         </div>
 
         <div>
@@ -63,10 +64,10 @@ const FeaturesTwo = () => {
             </div>
 
           </div>
-          <a href="#" className="btn-learn-more btn-primary">
+          <Link href="#" className="btn-learn-more btn-primary">
             <span>Learn more</span>
             <i className="fa-solid fa-arrow-right"></i>
-          </a>
+          </Link>
         </div>
       </div>
     </section>

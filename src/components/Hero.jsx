@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 
 function Hero() {
@@ -17,20 +18,20 @@ function Hero() {
             Save, spend & manage money in your pocket.</p>
 
           <div className="buttons">
-            <a className="btn-download" href="#">
+            <Link className="btn-download" href="#">
               <img src="/images/hero/google-play.svg" alt="appstore" className="btn-download-image darkmode-off" />
               <img src="/images/hero/google-play-dark.svg" alt="appstore" className="btn-download-image darkmode-on" />
-            </a>
-            <a className="btn-download" href="#">
+            </Link>
+            <Link className="btn-download" href="#">
               <img src="/images/hero/app-store.svg" alt="google play" className="btn-download-image darkmode-off" />
               <img src="/images/hero/appstore-dark.svg" alt="google play" className="btn-download-image darkmode-on" />
-            </a>
+            </Link>
           </div>
 
           <div className="discover-more">
-            <a href="#" className="btn-round" aria-label="Discover more">
+            <Link href="#" className="btn-round" aria-label="Discover more">
               <i className="fa-regular fa-chevron-down arrow"></i>
-            </a>
+            </Link>
             <span>Discover more</span>
           </div>
         </div>
