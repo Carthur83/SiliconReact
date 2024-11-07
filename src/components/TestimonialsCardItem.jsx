@@ -3,13 +3,13 @@ import StarRatingItem from './StarRatingItem';
 
 const TestimonialsCardItem = ({ testimonial }) => {
 
-  const isCheckedList = [];
+  const isStarCheckedList = [];
 
   for (let i = 1; i <= 5; i++) {
     if (i <= testimonial.starRating) {
-      isCheckedList.push(true);
+      isStarCheckedList.push(true);
     } else {
-      isCheckedList.push(false);
+      isStarCheckedList.push(false);
     }
   }
 
@@ -20,7 +20,7 @@ const TestimonialsCardItem = ({ testimonial }) => {
 
       <div className="stars">
         {
-          isCheckedList.map((item, index) => (<StarRatingItem key={index} item={item} />))
+          isStarCheckedList.map((item, index) => (<StarRatingItem key={index} item={item} />))
         }
       </div>
 

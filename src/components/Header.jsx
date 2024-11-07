@@ -2,10 +2,7 @@ import React, { useEffect, useState } from 'react'
 import SiliconLogo from '../images/siliconlogo.svg'
 import { Link, NavLink } from 'react-router-dom';
 
-
-
 function Header() {
-  
   
   const [isOpen, setIsOpen] = useState(false);
   const [isDarkmodeOn, setIsDarkmodeOn] = useState(false);
