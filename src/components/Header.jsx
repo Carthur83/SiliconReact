@@ -1,39 +1,14 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState, useContext } from 'react'
 import SiliconLogo from '../images/siliconlogo.svg'
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom'
+import { ThemeContext } from '../contexts/ThemeContext'
 
 function Header() {
   
+  const { switchToDark, isDarkmodeOn } = useContext(ThemeContext);
+
   const [isOpen, setIsOpen] = useState(false);
-  const [isDarkmodeOn, setIsDarkmodeOn] = useState(false);
   
-  function switchToDark() {
-    const newMode = !isDarkmodeOn;
-    setIsDarkmodeOn(newMode);
-
-    if(newMode) {
-      document.documentElement.setAttribute('data-theme', 'dark')
-      localStorage.setItem('theme','dark')
-    } else {
-      document.documentElement.setAttribute('data-theme', 'light')
-      localStorage.setItem('theme', 'light')
-    }
-  }
-
-  useEffect(() => {
-    const savedTheme = localStorage.getItem('theme')
-
-    if(savedTheme === 'dark') {
-      document.documentElement.setAttribute('data-theme', 'dark')
-      setIsDarkmodeOn(true)
-    } else {
-      document.documentElement.setAttribute('data-theme', 'light')
-      setIsDarkmodeOn(false)
-    }
-  
-  }, [])
-  
-
   function openMenu() {
     setIsOpen(value => !value);
   }

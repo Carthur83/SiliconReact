@@ -6,23 +6,26 @@ import Footer from './components/Footer'
 import AppFeatures from "./views/AppFeatures"
 import SignInUp from "./views/SignInUp"
 import AppProvider from "./contexts/AppContext"
+import ThemeProvider from "./contexts/ThemeContext"
 
 function App() {
 
   return (
     <AppProvider>
-      <BrowserRouter>
-        <Header />
-        <main>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/appfeatures" element={<AppFeatures />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/signinup" element={<SignInUp />} />
-          </Routes>
-        </main>
-        <Footer />
-      </BrowserRouter>
+      <ThemeProvider>     
+        <BrowserRouter>
+          <Header />
+          <main>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/appfeatures" element={<AppFeatures />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/signinup" element={<SignInUp />} />
+            </Routes>
+          </main>
+          <Footer />
+        </BrowserRouter>
+        </ThemeProvider>
     </AppProvider>
   )
 }
