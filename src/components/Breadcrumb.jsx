@@ -14,7 +14,7 @@ const Breadcrumb = () => {
           <img src="/images/contacts/bx-home-alt.svg" alt="" />
         </div>
         <li>
-          <Link to='/'>Home</Link>
+          <Link to='/'>Homepage</Link>
         </li>
         {
           pathnames.map((value, index) => {

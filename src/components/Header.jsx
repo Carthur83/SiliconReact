@@ -37,7 +37,6 @@ function Header() {
         <nav className={`navbar ${isOpen ? 'open-nav' : ''}`}>
 
           <div className='link-container'>
-            <Link onClick={openMenu} to="/" className='text-m links'>Home</Link>
             <NavLink onClick={openMenu} to="/appfeatures" className='text-m links'>Features</NavLink>
             <NavLink onClick={openMenu} to="/contact" className='text-m links'>Contact</NavLink>
           </div>

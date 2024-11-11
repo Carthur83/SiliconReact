@@ -496,6 +496,7 @@ header {
     align-items: center;
     gap: 2rem;
     transform: translateY(-200%);
+    z-index: 100;
 
     .link-container {
       display: flex;
@@ -509,7 +510,7 @@ header {
       position: static;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 45.9rem;
+      gap: 50rem;
       align-items: center;
       justify-content: center;
       box-shadow: none;
