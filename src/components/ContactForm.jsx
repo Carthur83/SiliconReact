@@ -79,9 +79,9 @@ const ContactForm = () => {
         <label htmlFor="specialist" className="form-label">Specialist</label>
         <select name='specialist' className="form-input" onChange={handleOnChange} required >
           <option value=''>--Please choose an option--</option>
-          <option value="Specialist One">Specialist One</option>
-          <option value="Specialist Two">Specialist Two</option>
-          <option value="Specialist Three">Specialist Three</option>
+          <option value="Specialist One">Family Physician</option>
+          <option value="Specialist Two">Physiatrist</option>
+          <option value="Specialist Three">Podiatrist</option>
         </select>
         <p className='error-message'>{errors.specialist}</p>
       </div>

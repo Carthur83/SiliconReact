@@ -17,7 +17,6 @@ const TestimonialsCardItem = ({ testimonial }) => {
     <div className="content-box">
       <img className="img-quote" src="/images/testimonials/quotes.svg" alt="quote" />
 
-
       <div className="stars">
         {
           isStarCheckedList.map((item, index) => (<StarRatingItem key={index} item={item} />))
